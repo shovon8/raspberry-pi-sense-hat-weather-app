@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raspberry Pi Weather Station</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+<div id="content">
+  <h1>Raspberry Pi Weather Station</h1>
+  
+  <div class="data-content">
+    <h2>Temperature</h2>
+    <div class="data-row">
+      <div class="data-cell" id="tempC">
+        ...
+      </div>
+      <div class="data-cell" id="tempF">
+        ...
+      </div>
+    </div>
+  </div>
+  
+  <div class="data-content">
+    <h2>Pressure</h2>
+    <div class="data-row">
+      <div class="data-cell" id="pressureMb">
+        ...
+      </div>
+      <div class="data-cell" id="pressurePsi">
+        ...
+      </div>
+    </div>
+    <div class="data-row">
+      <div class="data-cell" id="pressureHpa">
+        ...
+      </div>
+      <div class="data-cell" id="pressureP">
+        ...
+      </div>
+    </div>
+  </div>
+  
+  <div class="data-content">
+    <h2>Humidity</h2>
+    <div class="data-row">
+      <div class="data-cell" id="humidity">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

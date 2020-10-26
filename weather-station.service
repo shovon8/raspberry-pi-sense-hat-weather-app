@@ -1,0 +1,16 @@
+[Unit]
+Description=Raspberry Pi Weather Station Web App Using Raspberry Pi Sense Hat
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/work
+Environment=FLASK_APP=server.py
+Environment=FLASK_ENV=production
+ExecStart=/usr/bin/flask run --host=0.0.0.0
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
